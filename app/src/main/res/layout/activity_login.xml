@@ -1,0 +1,194 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/img_login"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!-- logo图和文字 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/margin15">
+
+            <ImageView
+                android:id="@+id/login_logo_iv"
+                android:layout_width="80dp"
+                android:layout_marginTop="@dimen/margin20"
+                android:layout_height="80dp"
+                android:src="@mipmap/ic_logo_round" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin20"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="2"
+                android:textColor="@color/white"
+                android:text="@string/app_name_all"
+                android:textSize="@dimen/txt20"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin15"
+            android:layout_marginLeft="@dimen/margin24"
+            android:layout_marginRight="@dimen/margin24"
+            android:background="@drawable/bg_border_white"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="2dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin5"
+                android:layout_marginRight="@dimen/margin3"
+                android:background="@mipmap/ic_host" />
+
+            <EditText
+                android:id="@+id/tv_host"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:hint="@string/hint_host"
+                android:imeOptions="actionNext"
+                android:maxLength="20"
+                android:maxLines="1"
+                android:padding="@dimen/margin8"
+                android:singleLine="true"
+                android:textColor="@color/black_light"
+                android:textColorHint="@color/black_light"
+                android:textSize="@dimen/txt15" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin15"
+            android:layout_marginLeft="@dimen/margin24"
+            android:layout_marginRight="@dimen/margin24"
+            android:background="@drawable/bg_border_white"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="2dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin5"
+                android:layout_marginRight="@dimen/margin3"
+                android:background="@mipmap/ic_user_bph" />
+
+            <EditText
+                android:id="@+id/tv_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:hint="@string/hint_username"
+                android:imeOptions="actionNext"
+                android:maxLength="20"
+                android:maxLines="1"
+                android:padding="@dimen/margin8"
+                android:singleLine="true"
+                android:textColor="@color/black_light"
+                android:textColorHint="@color/black_light"
+                android:textSize="@dimen/txt15" />
+
+
+        </LinearLayout>
+
+        <!-- 密码 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin15"
+            android:layout_marginLeft="@dimen/margin24"
+            android:layout_marginRight="@dimen/margin24"
+            android:background="@drawable/bg_border_white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="2dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin5"
+                android:layout_marginRight="1dp"
+                android:background="@mipmap/ic_lock" />
+
+            <EditText
+                android:id="@+id/tv_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/margin3"
+                android:background="@color/transparent"
+                android:gravity="center_vertical"
+                android:hint="@string/hint_pwd"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                android:maxLength="20"
+                android:maxLines="1"
+                android:padding="@dimen/margin8"
+                android:textColor="@color/black_light"
+                android:textColorHint="@color/black_light"
+                android:textSize="@dimen/txt15" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin24"
+            android:layout_marginRight="@dimen/margin24"
+            android:layout_marginTop="@dimen/margin5"
+            android:background="@drawable/bg_ripple"
+            android:imeOptions="actionGo"
+            android:padding="@dimen/margin8"
+            android:text="@string/login"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt16" />
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.3">
+
+    </RelativeLayout>
+
+</LinearLayout>

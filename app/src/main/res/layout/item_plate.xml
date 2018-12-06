@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_bg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_corner_white"
+    android:padding="@dimen/margin10">
+
+    <TextView
+        android:id="@+id/tv_plate_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:background="@drawable/bg_plate_yellow"
+        android:gravity="center"
+        android:padding="@dimen/margin5"
+        android:textColor="@color/black"
+        android:textSize="@dimen/txt16"
+        android:textStyle="bold"
+        tools:text="冀F123456" />
+
+    <LinearLayout
+        android:id="@+id/layout_plate_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/tv_plate_no"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/item_area_name"
+            style="@style/tv_style_device"
+            android:drawableLeft="@mipmap/ic_homepage"
+            android:drawablePadding="@dimen/margin5"
+            tools:text="基地大门" />
+
+        <TextView
+            android:id="@+id/item_plate_type"
+            style="@style/tv_style_device"
+            android:drawableLeft="@mipmap/ic_type"
+            android:drawablePadding="@dimen/margin5"
+            tools:text="大车" />
+
+        <TextView
+            android:id="@+id/item_plate_time"
+            style="@style/tv_style_device"
+            android:drawableLeft="@mipmap/ic_time"
+            android:drawablePadding="@dimen/margin5"
+            android:gravity="center_vertical"
+            tools:text="2018-8-12 8:19:21" />
+
+    </LinearLayout>
+
+</RelativeLayout>

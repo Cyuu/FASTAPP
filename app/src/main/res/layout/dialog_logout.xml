@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_content1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_corner_white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/layout_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin20"
+        android:layout_marginTop="@dimen/margin10"
+        android:layout_marginRight="@dimen/margin20"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin5">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="用户名："
+            android:textColor="@color/black_light2"
+            android:textSize="@dimen/txt14" />
+
+        <TextView
+            android:id="@+id/tv_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_head"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/black_light"
+            android:textSize="@dimen/txt16"
+            tools:text="测试用户" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_version"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin20"
+        android:layout_marginRight="@dimen/margin20"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin10">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="版本号："
+            android:textColor="@color/black_light2"
+            android:textSize="@dimen/txt14" />
+
+        <TextView
+            android:id="@+id/tv_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin10"
+            android:text="v1.0"
+            android:textColor="@color/black_light"
+            android:textSize="@dimen/txt16" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layout_out"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin20"
+        android:layout_marginRight="@dimen/margin20"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin10">
+
+        <Button
+            android:id="@+id/logout_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin5"
+            android:layout_weight="1"
+            android:background="@drawable/btn_red_selector"
+            android:gravity="center"
+            android:padding="@dimen/margin10"
+            android:text="登出"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt14" />
+
+        <Button
+            android:id="@+id/btn_dismiss"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin5"
+            android:layout_weight="1"
+            android:background="@drawable/btn_gray_selector"
+            android:gravity="center"
+            android:padding="@dimen/margin10"
+            android:text="取消"
+            android:textColor="@color/black_light"
+            android:textSize="@dimen/txt14" />
+    </LinearLayout>
+</LinearLayout>

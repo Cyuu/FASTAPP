@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">FAST</string>
+    <string name="app_name_all">FAST 智能周界安防系统</string>
+
+    <string name="hint_host">服务器地址</string>
+    <string name="hint_port">端口号</string>
+    <string name="hint_username">用户名</string>
+    <string name="hint_pwd">密码</string><!-- 密码 • ● -->
+    <string name="login">登&#160;&#160;录</string>
+
+    <string name="str_his_alarm">历史告警</string>
+    <string name="str_device_power">设备电压状态</string>
+    <string name="str_power_line">设备电压曲线图</string>
+
+
+    <string name="action_settings">设置</string>
+    <string name="action_search">站点查找</string>
+    <string name="action_history">历史告警</string>
+    <string name="action_alarm">最新告警</string>
+    <string name="action_device">设备状态</string>
+    <string name="action_station">站点列表</string>
+    <string name="action_mine">我的</string>
+    <string name="action_submit">提交</string>
+    <string name="action_power">电压曲线图</string>
+    <string name="action_refresh">刷新</string>
+    <string name="action_finish">完成</string>
+    <string name="title_activity_main">MainActivity</string>
+
+
+    <string name="person_name">人员姓名:</string>
+    <string name="similarity">&#160;&#160;&#160;&#160;相似度: </string>
+    <string name="match">是否匹配:</string>
+    <string name="recog_time">识别时间:</string>
+    <string name="look_record">查看\n录像</string>
+
+
+    <string name="pageup">&#160;&#160;&#60;&#160;&#160;</string>
+    <string name="pagedown">&#160;&#160;&#62;&#160;&#160;</string>
+
+    <string name="nodata">无数据</string>
+
+</resources>

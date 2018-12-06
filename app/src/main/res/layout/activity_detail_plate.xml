@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipy_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin10"
+                android:layout_marginRight="@dimen/margin10"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_plate"
+                    style="@style/iv_style_common"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/ic_empty"
+                    android:minHeight="120dp"
+                    android:scaleType="centerCrop" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin10"
+                android:background="@drawable/bg_corner_white"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="@dimen/margin10"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_plate_no"
+                        style="@style/tv_style_device"
+                        android:background="@drawable/bg_plate_yellow"
+                        android:padding="@dimen/margin5"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/txt16"
+                        android:textStyle="bold"
+                        tools:text="冀F 123456" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/margin3">
+
+                    <TextView
+                        style="@style/tv_style_device"
+                        android:text="车牌类型:"
+                        android:textColor="@color/gray" />
+
+                    <TextView
+                        android:id="@+id/tv_plate_type"
+                        style="@style/tv_style_device"
+                        tools:text="标准民用车" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/margin3">
+
+                    <TextView
+                        style="@style/tv_style_device"
+                        android:text="通行位置:"
+                        android:textColor="@color/gray" />
+
+                    <TextView
+                        android:id="@+id/tv_plate_addr"
+                        style="@style/tv_style_device"
+                        tools:text="保定市新市区站点1" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/margin3">
+
+                    <TextView
+                        style="@style/tv_style_device"
+                        android:text="通过时间:"
+                        android:textColor="@color/gray" />
+
+                    <TextView
+                        android:id="@+id/tv_plate_time"
+                        style="@style/tv_style_device"
+                        tools:text="2018-10-1 11:22:12" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

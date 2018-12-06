@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_corner_white"
+    android:gravity="center_horizontal"
+    android:orientation="horizontal"
+    android:padding="@dimen/margin5">
+
+    <TextView
+        android:id="@+id/item_ipc_name"
+        style="@style/tv_style_device"
+        android:layout_width="match_parent"
+        android:layout_toLeftOf="@+id/iv_goright"
+        android:drawableLeft="@mipmap/ic_ipc_blue"
+        android:drawablePadding="@dimen/margin5"
+        android:layout_margin="@dimen/margin3"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/txt14"
+        tools:text="牛角北01号枪机" />
+
+    <ImageView
+        android:id="@+id/iv_goright"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/margin5"
+        android:background="@mipmap/ic_arrow_right" />
+</RelativeLayout>

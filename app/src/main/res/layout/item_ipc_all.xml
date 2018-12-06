@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_corner_white"
+    android:orientation="horizontal"
+    android:padding="@dimen/margin5">
+
+    <LinearLayout
+        android:id="@+id/layout_ipc_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/layout_ipc_content"
+        android:layout_alignBottom="@+id/layout_ipc_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:padding="@dimen/margin5">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/ic_cam" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_ipc_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/layout_ipc_iv"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/item_ipc_name"
+            style="@style/tv_style_device"
+            tools:text="牛角北01号枪机" />
+
+        <TextView
+            android:id="@+id/item_ipc_addr"
+            style="@style/tv_style_device"
+            tools:text="牛角" />
+
+        <TextView
+            android:id="@+id/item_ipc_ip"
+            style="@style/tv_style_device"
+            tools:text="192.168.60.210" />
+
+        <TextView
+            android:id="@+id/item_ipc_type"
+            style="@style/tv_style_device"
+            tools:text="球机/NVR" />
+
+        <TextView
+            android:id="@+id/item_ipc_channel"
+            style="@style/tv_style_device"
+            tools:text="通道1" />
+
+    </LinearLayout>
+</RelativeLayout>

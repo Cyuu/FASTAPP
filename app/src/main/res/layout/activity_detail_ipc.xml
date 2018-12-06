@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipy_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- 视频展示区 / 视频入口 -->
+            <RelativeLayout
+                android:id="@+id/layout_video"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <SurfaceView
+                    android:id="@+id/sur_player"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#0000ff00" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin10"
+                android:layout_marginTop="@dimen/margin10"
+                android:layout_marginRight="@dimen/margin10"
+                android:background="@drawable/bg_corner_white"
+                android:orientation="vertical"
+                android:padding="@dimen/margin5">
+
+                <TextView
+                    android:id="@+id/tv_ipc_name"
+                    style="@style/tv_style_device"
+                    android:layout_marginLeft="@dimen/margin5"
+                    tools:text="Fast牛角北150米摄像头1" />
+
+            </LinearLayout>
+
+            <include layout="@layout/include_bk_single_channel" />
+
+            <Button
+                android:id="@+id/btn_hkdemo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="HkActivity" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

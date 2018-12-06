@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin15" >
+
+    <TextView
+        android:id="@+id/dialog_title_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/margin5"
+        android:layout_marginBottom="@dimen/margin15"
+        android:layout_marginLeft="@dimen/margin15"
+        android:layout_marginRight="@dimen/margin15"
+        android:text="确定吗？"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="@dimen/txt16"/>
+
+    <EditText
+        android:id="@+id/pwd_check_ed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dialog_title_tv"
+        android:background="@color/gray"
+        android:hint="请输入密码"
+        android:focusable="true"
+        android:inputType="textPassword"
+        android:padding="@dimen/margin12"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="@dimen/txt16"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="*"
+        android:layout_alignBottom="@+id/pwd_check_ed"
+        android:layout_below="@+id/dialog_title_tv"
+        android:gravity="center"
+        android:textColor="@color/red_color"
+        android:textSize="@dimen/txt24"
+        android:layout_alignRight="@+id/dialog_title_tv"
+        android:layout_alignEnd="@+id/dialog_title_tv"/>
+
+</RelativeLayout>

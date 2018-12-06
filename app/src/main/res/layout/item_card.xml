@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_bg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_card_blue"
+    android:orientation="vertical"
+    android:padding="@dimen/margin5">
+
+    <LinearLayout
+        android:id="@+id/layout_card1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/tv_style_common"
+            android:text="姓  名"
+            android:textColor="@color/blue_color"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/item_face_name"
+            style="@style/tv_style_common"
+            android:layout_width="0dp"
+            android:layout_marginLeft="@dimen/margin5"
+            android:layout_weight="1"
+            android:textSize="@dimen/txt16"
+            tools:text="张三芒" />
+
+        <TextView
+            style="@style/tv_style_common"
+            android:text="性  别"
+            android:textColor="@color/blue_color"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/item_face_sex"
+            style="@style/tv_style_common"
+            android:layout_width="0dp"
+            android:layout_marginLeft="@dimen/margin5"
+            android:layout_weight="1"
+            android:textSize="@dimen/txt16"
+            tools:text="男" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_card2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_card1"
+        android:layout_toLeftOf="@+id/iv_card"
+        android:orientation="horizontal">
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_card3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_card2"
+        android:layout_toLeftOf="@+id/iv_card"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/tv_style_common"
+            android:text="年  龄"
+            android:textColor="@color/blue_color"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/item_face_ages"
+            style="@style/tv_style_common"
+            android:layout_width="0dp"
+            android:layout_marginLeft="@dimen/margin5"
+            android:layout_weight="1"
+            android:textSize="@dimen/txt16"
+            tools:text="中年" />
+
+
+        <TextView
+            style="@style/tv_style_common"
+            android:text="眼  镜"
+            android:textColor="@color/blue_color"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/item_face_glasses"
+            style="@style/tv_style_common"
+            android:layout_width="0dp"
+            android:layout_marginLeft="@dimen/margin5"
+            android:layout_weight="1"
+            android:textSize="@dimen/txt16"
+            tools:text="未佩戴" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_card5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_card3"
+        android:layout_toLeftOf="@+id/iv_card"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/tv_style_common"
+            android:text="地  址"
+            android:textColor="@color/blue_color"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/item_face_addr"
+            style="@style/tv_style_common"
+            android:layout_marginLeft="@dimen/margin5"
+            android:textSize="@dimen/txt16"
+            tools:text="河北省保定市恒滨路99号" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_card6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_card5"
+        android:layout_toLeftOf="@+id/iv_card"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/tv_style_common"
+            android:text="时  间"
+            android:textColor="@color/blue_color"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/item_face_time"
+            style="@style/tv_style_common"
+            android:layout_marginLeft="@dimen/margin5"
+            android:textSize="@dimen/txt16"
+            tools:text="2018-11-14 15:52:00" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_card7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_top"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/tv_style_common"
+            android:text="身份证号码"
+            android:textColor="@color/blue_color"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/item_certno"
+            style="@style/tv_style_common"
+            android:layout_marginLeft="@dimen/margin5"
+            android:textSize="@dimen/txt16"
+            android:textStyle="bold"
+            tools:text="123456789012345678" />
+
+    </LinearLayout>
+
+</LinearLayout>

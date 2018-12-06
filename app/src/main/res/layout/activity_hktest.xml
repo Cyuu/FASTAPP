@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:id="@+id/Play"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/widget_Play"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:paddingLeft="@dimen/margin10"
+                android:paddingTop="@dimen/margin5"
+                android:paddingBottom="@dimen/margin5">
+
+                <TextView
+                    android:id="@+id/TV_IP"
+                    android:layout_width="25dip"
+                    android:layout_height="40dip"
+                    android:gravity="center"
+                    android:text="IP"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/EDT_IPAddr"
+                    android:layout_width="150dip"
+                    android:layout_height="40dip"
+                    android:layout_toRightOf="@+id/TV_IP"
+                    android:textColor="@color/black_light"
+                    tools:text="fdsaf" />
+
+                <TextView
+                    android:id="@+id/TV_Port"
+                    android:layout_width="40dip"
+                    android:layout_height="40dip"
+                    android:layout_toRightOf="@+id/EDT_IPAddr"
+                    android:gravity="center"
+                    android:text="Port"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/EDT_Port"
+                    android:layout_width="80dip"
+                    android:layout_height="40dip"
+                    android:layout_toRightOf="@+id/TV_Port"
+                    android:text="32131"
+                    android:textColor="@color/black_light" />
+
+                <TextView
+                    android:id="@+id/TV_User"
+                    android:layout_width="40dip"
+                    android:layout_height="40dip"
+                    android:layout_below="@+id/TV_IP"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center"
+                    android:text="User"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/EDT_User"
+                    android:layout_width="120dip"
+                    android:layout_height="40dip"
+                    android:layout_below="@+id/TV_IP"
+                    android:layout_toRightOf="@+id/TV_User"
+                    android:textColor="@color/black_light"
+                    tools:text="2123f" />
+
+                <TextView
+                    android:id="@+id/TV_Psd"
+                    android:layout_width="40dip"
+                    android:layout_height="40dip"
+                    android:layout_below="@+id/TV_IP"
+                    android:layout_toRightOf="@+id/EDT_User"
+                    android:gravity="center"
+                    android:text="Psd"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/EDT_Psd"
+                    android:layout_width="120dip"
+                    android:layout_height="40dip"
+                    android:layout_below="@+id/TV_IP"
+                    android:layout_toRightOf="@+id/TV_Psd"
+                    android:inputType="textPassword"
+                    android:textColor="@color/black_light"
+                    tools:text="132" />
+
+                <Button
+                    android:id="@+id/btn_Login"
+                    android:layout_width="100dip"
+                    android:layout_height="40dip"
+                    android:layout_below="@+id/TV_User"
+                    android:text="Login"
+                    android:textColor="#ff000000"
+                    android:typeface="sans" />
+
+                <Button
+                    android:id="@+id/btn_Preview"
+                    android:layout_width="100dip"
+                    android:layout_height="40dip"
+                    android:layout_below="@+id/TV_User"
+                    android:layout_toRightOf="@+id/btn_Login"
+                    android:text="Preview"
+                    android:textColor="#ff000000"
+                    android:typeface="sans" />
+
+                <Button
+                    android:id="@+id/btn_Playback"
+                    android:layout_width="100dip"
+                    android:layout_height="40dip"
+                    android:layout_below="@+id/TV_User"
+                    android:layout_toRightOf="@+id/btn_Preview"
+                    android:text="Playback"
+                    android:textColor="#ff000000"
+                    android:typeface="sans" />
+
+                <Button
+                    android:id="@+id/btn_ParamCfg"
+                    android:layout_width="100dip"
+                    android:layout_height="40dip"
+                    android:layout_below="@+id/btn_Playback"
+                    android:layout_alignLeft="@+id/btn_Playback"
+                    android:text="Sub(CIF)"
+                    android:textColor="#ff000000"
+                    android:typeface="sans" />
+
+                <Button
+                    android:id="@+id/btn_Capture"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/btn_ParamCfg"
+                    android:layout_alignRight="@+id/btn_Login"
+                    android:layout_alignBottom="@+id/btn_ParamCfg"
+                    android:layout_alignParentLeft="true"
+                    android:text="Capture" />
+
+                <Button
+                    android:id="@+id/btn_Record"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/btn_Preview"
+                    android:layout_alignLeft="@+id/btn_Preview"
+                    android:layout_alignRight="@+id/btn_Preview"
+                    android:layout_alignBottom="@+id/btn_ParamCfg"
+                    android:text="Record" />
+
+                <Button
+                    android:id="@+id/btn_Talk"
+                    android:layout_width="100dip"
+                    android:layout_height="40dip"
+                    android:layout_below="@+id/btn_Capture"
+                    android:layout_toLeftOf="@+id/btn_Record"
+                    android:text="Talk"
+                    android:textColor="#ff000000"
+                    android:typeface="sans" />
+
+                <Button
+                    android:id="@+id/btn_PTZ"
+                    android:layout_width="100dip"
+                    android:layout_height="40dip"
+                    android:layout_alignBottom="@+id/btn_Talk"
+                    android:layout_toRightOf="@+id/btn_Talk"
+                    android:text="PTZ(L)"
+                    android:textColor="#ff000000"
+                    android:typeface="sans" />
+
+                <Button
+                    android:id="@+id/btn_OTHER"
+                    android:layout_width="100dip"
+                    android:layout_height="40dip"
+                    android:layout_alignBottom="@+id/btn_Talk"
+                    android:layout_toRightOf="@+id/btn_PTZ"
+                    android:text="Other"
+                    android:textColor="#ff000000"
+                    android:typeface="sans" />
+
+                <Button
+                    android:id="@+id/btn_perview_chn1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dip"
+                    android:layout_below="@+id/btn_Talk"
+                    android:text="pre_channel 1"
+                    android:textColor="#ff000000"
+                    android:typeface="sans" />
+
+                <Button
+                    android:id="@+id/btn_perview_chn2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dip"
+                    android:layout_below="@+id/btn_Talk"
+                    android:layout_toRightOf="@+id/btn_perview_chn1"
+                    android:text="perview_chn 2"
+                    android:textColor="#ff000000"
+                    android:typeface="sans" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/widget_Play">
+
+                <SurfaceView
+                    android:id="@+id/Sur_Player"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#0000ff00" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</ScrollView>

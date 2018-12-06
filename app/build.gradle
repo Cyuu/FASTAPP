@@ -1,0 +1,144 @@
+apply plugin: 'com.android.application'
+
+repositories {
+    flatDir {
+        dir 'libs'
+    }
+}
+
+android {
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    // 签名配置
+//    signingConfigs {
+//        config {
+//            keyAlias 'thdz'
+//            keyPassword 'galaxyycy'
+//            storeFile file('C:/Users/Administrator/thdz.jks')
+//            storePassword 'yangchunyu'
+//        }
+//    }
+
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.thdz.fast"
+        minSdkVersion 19
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [eventBusIndex: 'com.thdz.fast.MyEventBusIndex']
+            }
+        }
+
+        // 个推参数
+        manifestPlaceholders = [
+                GETUI_APP_ID    : "aLxQUb9PkY9ISM6SvQKcu1",
+                GETUI_APP_KEY   : "tAUOZlUpHS6lQqo1YYPey4",
+                GETUI_APP_SECRET: "TTChOHT0qT8hQIxgaRzcp9",
+                PACKAGE_NAME    : applicationId
+        ]
+
+        ndk {
+            abiFilters "armeabi", "armeabi-v7a", "arm64-v8a" // , "x86_64"
+        }
+        vectorDrawables.useSupportLibrary = true
+
+        multiDexEnabled true
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            // shrinkResources true,此时启用了资源精简，为了避免个推SDK所需资源被错误精简导致功能异常，需要在项目资源目录res/raw中添加keep.xml文件
+            // shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+//        debug {
+//            signingConfig signingConfigs.debug
+//        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+
+//        debug.setRoot('build-types/debug')
+//        release.setRoot('build-types/release')
+
+    }
+
+//    lintOptions {
+//        abortOnError false
+//    }
+
+}
+
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation(name: 'dtchooser-release', ext: 'aar')
+
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'android.arch.lifecycle:extensions:1.1.1'
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    testImplementation 'junit:junit:4.12'
+
+    //SwipyRefreshLayout 允许上下两方向刷新的SwipeRefreshLayout扩展。
+    implementation 'com.github.orangegangsters:swipy:1.2.3@aar'
+
+    implementation 'com.android.support:support-v4:27.1.1'
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:design:27.1.1'
+
+    implementation 'com.android.support:cardview-v7:27.1.1'
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
+
+    // 4.4 三星s4部署出错：
+    implementation 'com.android.support:multidex:1.0.3'
+
+    // okhttpUtils的引用
+    implementation 'com.zhy:okhttputils:2.6.2'
+
+    // retrofit2通信
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
+
+    // eventbus
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    annotationProcessor 'org.greenrobot:eventbus-annotation-processor:3.0.1'
+
+    // 使用butterknife
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+
+    // loading库
+    implementation 'com.ldoublem.loadingview:loadingviewlib:1.0'
+
+    implementation 'com.zhy:base-rvadapter:3.0.3'
+    implementation 'com.jude:easyrecyclerview:4.4.2'
+
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+
+    implementation 'com.getui:sdk:2.12.5.0'
+
+    // 顶部tab
+    implementation 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
+
+}

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2694ea</color>
+    <color name="colorPrimaryDark">#085ce2</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="windowBackground">#fefefe</color>
+    <color name="navigationColor">#fbfbfb</color>
+
+    <color name="black">#111111</color>
+    <color name="black_light">#333333</color>
+    <color name="black_light2">#555555</color>
+    <color name="transparent">#00000000</color>
+    <color name="trans_black_10">#10111111</color>
+    <color name="trans_black_30">#40111111</color>
+
+    <color name="white">#ffffff</color>
+    <color name="white_light">#eeeeee</color>
+    <color name="white_trans">#80cccccc</color>
+    <color name="white_trans_b0">#b0cccccc</color>
+
+    <color name="blue">#0000FF</color>
+    <color name="blue_light">#4466FF</color>
+    <color name="blue_color">#339AEB</color>
+    <color name="blue_sky">#00BFFF</color>
+    <color name="bluelight">#a0e1f6</color>
+    <color name="card_blue">#C8E8F1</color>
+    <color name="card_green">#C3EECB</color>
+
+
+    <color name="red">#dd2200</color>
+    <color name="red_color">#E4675C</color>
+    <color name="red_deep_color">#dd2200</color>
+    <color name="red_light">#cc4455</color>
+
+    <color name="bg_gray">#F0F0F0</color>
+    <color name="gray_bg">#eeeeee</color><!--灰色 -->
+    <color name="gray_light">#cccccc</color><!--灰色 -->
+    <color name="tab_color">#bbbbbb</color><!--灰色 -->
+    <color name="gray">#888888</color>
+
+    <color name="yellow">#FFFF00</color><!--橙色 -->
+    <color name="orange">#FF9800</color><!--橙色 -->
+    <color name="orange_trans">#bbf77c19</color>
+    <color name="orange_deep">#EDF86E05</color>
+
+    <color name="bg_green">#0F2739</color>
+    <!--<color name="bg_green_light">#9932424A</color>-->
+
+    <color name="green_light">#50099605</color>
+    <color name="green_color">#4ADF64</color>
+    <color name="green_deep_color">#229a22</color>
+    <color name="green_bg">#009688</color>
+
+    <color name="purple_color">#800080</color>
+
+    <color name="gray_smpl">#888</color>
+    <color name="green_smpl">#4d0</color>
+
+    <color name="ripple_color">#9ddd</color>
+    <!--<color name="ripple_color_deep">#9aaa</color>-->
+
+
+    <!-- 车牌的颜色 -->
+    <color name="plate_blue">#0081E6</color>
+    <color name="plate_yellow">#FECC00</color>
+    <color name="plate_green">#00CD78</color>
+
+</resources>

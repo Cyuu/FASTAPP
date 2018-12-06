@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_bg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_item"
+    android:padding="@dimen/margin10">
+
+    <LinearLayout
+        android:id="@+id/layout_fiber_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/item_face_name"
+            style="@style/tv_style_common"
+            android:drawableLeft="@mipmap/ic_face_small"
+            android:drawablePadding="@dimen/margin12"
+            android:textSize="@dimen/txt16"
+            tools:text="人脸所属人姓名" />
+
+        <TextView
+            android:id="@+id/item_face_addr"
+            style="@style/tv_style_common"
+            android:layout_marginTop="@dimen/margin5"
+            android:drawableLeft="@mipmap/ic_addr"
+            android:drawablePadding="@dimen/margin15"
+            tools:text="基地大门" />
+
+        <TextView
+            android:id="@+id/item_face_certno"
+            style="@style/tv_style_common"
+            android:layout_marginTop="@dimen/margin5"
+            android:drawableLeft="@mipmap/ic_cert"
+            android:drawablePadding="@dimen/margin5"
+            tools:text="身份证号" />
+
+        <TextView
+            android:id="@+id/item_face_ages"
+            style="@style/tv_style_common"
+            android:layout_marginTop="@dimen/margin5"
+            android:drawableLeft="@mipmap/ic_ages"
+            android:drawablePadding="@dimen/margin12"
+            tools:text="年龄段" />
+
+        <TextView
+            android:id="@+id/item_face_glasses"
+            style="@style/tv_style_common"
+            android:layout_marginTop="@dimen/margin5"
+            android:drawableLeft="@mipmap/ic_glasses"
+            android:drawablePadding="@dimen/margin5"
+            tools:text="配戴眼镜" />
+
+        <TextView
+            android:id="@+id/item_face_time"
+            style="@style/tv_style_common"
+            android:layout_marginTop="@dimen/margin5"
+            android:drawableLeft="@mipmap/ic_time"
+            android:drawablePadding="@dimen/margin15"
+            tools:text="2018-11-14 15:52:00" />
+
+    </LinearLayout>
+</RelativeLayout>

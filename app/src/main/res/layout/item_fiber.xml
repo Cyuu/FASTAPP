@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_bg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_item"
+    android:padding="@dimen/margin10">
+
+    <LinearLayout
+        android:id="@+id/layout_fiber_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/item_alarm_msg"
+            style="@style/tv_style_common"
+            android:drawableLeft="@mipmap/ic_fiber_small"
+            android:drawablePadding="@dimen/margin5"
+            android:textColor="@color/red"
+            android:textSize="@dimen/txt16"
+            tools:text="光纤告警测试" />
+
+        <TextView
+            android:id="@+id/item_device_name"
+            style="@style/tv_style_common"
+            android:layout_marginTop="@dimen/margin5"
+            android:drawableLeft="@mipmap/ic_device"
+            android:drawablePadding="@dimen/margin5"
+            tools:text="基地大门光纤" />
+
+        <TextView
+            android:id="@+id/item_area_name"
+            style="@style/tv_style_common"
+            android:layout_marginTop="@dimen/margin5"
+            android:drawableLeft="@mipmap/ic_addr"
+            android:drawablePadding="@dimen/margin5"
+            tools:text="基地大门" />
+
+        <TextView
+            android:id="@+id/item_alarm_status"
+            style="@style/tv_style_common"
+            android:layout_marginTop="@dimen/margin5"
+            android:drawableLeft="@mipmap/ic_alarm_msg"
+            android:drawablePadding="@dimen/margin5"
+            android:textColor="@color/orange_deep"
+            android:textStyle="bold"
+            tools:text="新告警" />
+
+        <TextView
+            android:id="@+id/item_alarm_time"
+            style="@style/tv_style_common"
+            android:layout_marginTop="@dimen/margin5"
+            android:drawableLeft="@mipmap/ic_time"
+            android:drawablePadding="@dimen/margin5"
+            tools:text="2018-11-14 15:52:00" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/item_alarm_level"
+        style="@style/tv_style_alarmtype"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/margin20"
+        android:background="@drawable/bg_red_left_corner"
+        android:textColor="@color/white"
+        android:textSize="@dimen/txt14"
+        tools:text="一级告警" />
+
+</RelativeLayout>
