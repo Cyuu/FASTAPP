@@ -141,14 +141,21 @@ public class LoginActivity extends BaseActivity {
             return;
         }
         clientid =  event.getClientId();
-        // 如果本地未保存，则调整登陆按钮颜色，并保存（第一次登录使用），否则，不做任何处理(以后使用)
-        // toast("获取到ClientId：" + clientid);
         Log.i(TAG, "已获取到ClientId: " + clientid);
 
-//        if (TextUtils.isEmpty(SpUtil.getData(context, Finals.SP_CLIENTID))) {
-        // 将登陆框置为绿色，并可用
-        btn_login.setBackgroundResource(R.drawable.bg_green_selector);
-        btn_login.setEnabled(true);
+        if (!TextUtils.isEmpty(SpUtil.getData(context, Finals.SP_CLIENTID))) {
+            btn_login.setBackgroundResource(R.drawable.bg_green_selector);
+            btn_login.setEnabled(true);
+        } else {
+            // 将登陆框置为绿色，并可用
+            runOnUiThread(new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    btn_login.setBackgroundResource(R.drawable.bg_green_selector);
+                    btn_login.setEnabled(true);
+                }
+            }));
+        }
     }
 
     /**

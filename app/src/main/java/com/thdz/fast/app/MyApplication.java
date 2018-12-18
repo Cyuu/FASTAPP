@@ -6,6 +6,7 @@ import android.text.TextUtils;
 
 import com.thdz.fast.bean.PushBaseBean;
 import com.thdz.fast.bean.UserBean;
+import com.thdz.fast.util.DataUtils;
 import com.thdz.fast.util.FileUtil;
 import com.thdz.fast.util.Finals;
 import com.thdz.fast.util.SpUtil;
@@ -104,6 +105,9 @@ public class MyApplication extends Application {
     }
 
     public String getHostUrl() {
+        if (TextUtils.isEmpty(hostUrl)) {
+            DataUtils.CreateHostApiUrl(SpUtil.getData(this, Finals.SP_HOST));
+        }
         return hostUrl;
     }
 

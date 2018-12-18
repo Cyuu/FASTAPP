@@ -115,7 +115,8 @@ public class IPCActivity extends BaseActivity implements SurfaceHolder.Callback 
 
     @Override
     public void initView(Bundle savedInstanceState) {
-        hkHelper = HkHelper.getInstance(); // 实例化
+//        hkHelper = HkHelper.getInstance(); // 实例化
+        hkHelper = new HkHelper();
         if (!hkHelper.initSdk((Activity) context)) { // 初始化HK sdk
             this.finish();
             return;

@@ -54,6 +54,8 @@ public class Finals {
     public static final String Default_User = "1"; // 默认登录用户名
     public static final String Default_Pwd = "123456"; // 默认密码
 
+    public static final String Default_Host = "http://121.18.76.102:5546/";
+
 
 }
 

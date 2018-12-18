@@ -3,6 +3,7 @@ package com.thdz.fast.ui;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -162,6 +163,7 @@ public class MainActivity extends BaseActivity {
                     ((FiberFragment) mFragments.get(position)).refresh();
                     alarmFlag5 = false;
                 }
+                NotifyUtil.clearNofications();
             }
 
             @Override
@@ -331,9 +333,10 @@ public class MainActivity extends BaseActivity {
             @Override
             public void onError(Call call, final Exception e, int id) {
                 hideProgressDialog();
-                toast(failTip + "， 登出失败");
+                // toast(failTip + "， 登出失败");
+                Log.e(TAG, "登出失败");
                 e.printStackTrace();
-
+                goLogin();
             }
 
             @Override
@@ -342,24 +345,37 @@ public class MainActivity extends BaseActivity {
                 Log.i(TAG, "登出 返回参数是：" + value);
                 try {
                     if (DataUtils.isReturnOK(value)) {
-                        saveLogOutInfo();
-
-                        Intent intent = new Intent(context, LoginActivity.class);
-                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                        startActivity(intent);
-                        finish();
-
-                        clearAlarmState();
-
+                        Log.i(TAG, "登出成功");
+                        goLogin();
                     } else {
+                        Log.e(TAG, "登出失败");
                         toast(DataUtils.getReturnMsg(value));
+                        goLogin();
                     }
+
                 } catch (Exception e) {
-                    toast("退出登录 失败");
+                    Log.e(TAG, "登出异常");
                     e.printStackTrace();
+                    goLogin();
                 }
             }
         });
+    }
+
+
+    private void goLogin() {
+        saveLogOutInfo();
+        clearAlarmState();
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                Intent intent = new Intent(context, LoginActivity.class);
+                // intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+//                finish();
+            }
+        }, 1000);
+
     }
 
     /**

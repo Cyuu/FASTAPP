@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.text.TextUtils;
+import android.util.Log;
 
 import com.thdz.fast.app.MyApplication;
 
@@ -37,8 +38,13 @@ public class DataUtils {
      * 根据登录地址生成服务器接口地址
      */
     public static void CreateHostApiUrl(String ip) {
-        String hostUrl = "http://" + ip + "/api/";
-        MyApplication.getInstance().setHostUrl(hostUrl);
+        if (TextUtils.isEmpty(ip)) {
+            Log.i(TAG, "ip为空, 使用默认服务器地址");
+            MyApplication.getInstance().setHostUrl(Finals.Default_Host);
+        } else {
+            String hostUrl = "http://" + ip + "/api/";
+            MyApplication.getInstance().setHostUrl(hostUrl);
+        }
     }
 
     /**

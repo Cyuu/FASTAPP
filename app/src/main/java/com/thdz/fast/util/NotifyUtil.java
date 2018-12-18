@@ -43,6 +43,14 @@ public class NotifyUtil {
 
 
     /**
+     * 清除告警通知栏消息
+     */
+    public static void clearNofications() {
+        NotificationManagerCompat.from(MyApplication.getInstance()).cancel(MyApplication.notyId);
+    }
+
+
+    /**
      * 清空通知栏消息
      */
     public static void clearNotification() {

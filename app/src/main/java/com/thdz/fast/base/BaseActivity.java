@@ -25,7 +25,6 @@ import android.widget.TextView;
 import com.thdz.fast.R;
 import com.thdz.fast.app.MyApplication;
 import com.thdz.fast.util.BusUtil;
-import com.thdz.fast.util.NotifyUtil;
 import com.thdz.fast.util.StatusBarCompat;
 import com.thdz.fast.util.TsUtils;
 import com.thdz.fast.util.VUtils;
@@ -409,7 +408,7 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
      */
     public void clearAlarmState() {
         MyApplication.getInstance().pushBean = null;
-        NotifyUtil.clearNotification();
+        // NotifyUtil.clearNotification();
     }
 
 
